@@ -5,6 +5,8 @@ card_transactions_file = "card_transactions_record_20220224_162315.csv"
 card_currencies = ['GBP', 'EUR']
 native_currency = "GBP"
 
+print("Native Currency: {}".format(native_currency))
+
 static_gbp_eur_exchange_rate = 0.84
 
 
