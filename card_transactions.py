@@ -7,7 +7,7 @@ native_currency = "GBP"
 
 print("Native Currency: {}".format(native_currency))
 
-static_gbp_eur_exchange_rate = 0.84
+static_eur_gbp_exchange_rate = 0.84
 
 
 def get_deposit_descriptions():
@@ -31,7 +31,7 @@ gbp_deposits = card_txs[card_txs['Transaction Description'].isin(
     get_deposit_descriptions())]
 
 gbp_deposits.loc[gbp_deposits['Native Currency'] !=
-                 native_currency, 'Native Amount'] *= static_gbp_eur_exchange_rate
+                 native_currency, 'Native Amount'] *= static_eur_gbp_exchange_rate
 
 total_deposits = gbp_deposits['Native Amount'].sum()
 
